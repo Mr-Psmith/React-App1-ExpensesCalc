@@ -23,7 +23,7 @@ function ExpenseItem(props) {
       <ExpenseDate date={props.date} />     {/* = <ExpenseDate></ExpenseDate> Szal ugyanazt jelenti a kettő*/}
           {/* És így spliteltünk. BTW */}
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>                                                                              {/* edited from title to props.title */}
         {/* this has to match to the name we set in app.js */}
         <div className="expense-item__price">{props.amount}</div>
       </div>
