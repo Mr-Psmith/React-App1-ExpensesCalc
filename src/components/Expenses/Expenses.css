@@ -5,3 +5,7 @@
     width: 50rem;
     max-width: 95%;
   }
+.expenses-filter-none {
+  color: white;
+  padding: 1rem;
+}
