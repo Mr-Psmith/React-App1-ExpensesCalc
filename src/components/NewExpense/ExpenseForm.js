@@ -57,7 +57,6 @@ const ExpenseForm = (props) => { //props bec. of the UPWARD DATA PASSING
 
   return (
     <form onSubmit={submitHandler}> {/* button event listener (submit event). Which has a default reset "function", which kicks in when the button is pressed*/}
-      {" "}
       {/* default browser behaviour, but also it is that when we click the submit button the browser reloads */}
       <div className="new-expense__controls">
         <div className="new-expense__control">
@@ -84,12 +83,13 @@ const ExpenseForm = (props) => { //props bec. of the UPWARD DATA PASSING
             type="date"
             value={enteredDate}
             min="2019-01-01"
-            max="2023-12-31"
+            max="2022-12-31"
             onChange={dateChangeHandler}
           />
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.takeExpenseButtonHandlerPointer}>Cancel</button>
         <button type="submit">Add Expense</button> {/* listening to this we could use a onClick={}-event listenert, but we have a default one already */}
       </div>                                          {/* according which if a button is pressed in a form event, the overall form event will emit an event which we can listen, this called the "submit event" */}
     </form>                                                                                   /* so we tune it on the from itself abowe */

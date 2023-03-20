@@ -7,7 +7,7 @@ import "./Expenses.css";
 
 
 function Expenses(props) {
-  const [filteredYear, setFilteredYear] = useState("2000");
+  const [filteredYear, setFilteredYear] = useState("2021");
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
@@ -20,7 +20,7 @@ function Expenses(props) {
     ); /* We wanna check for a given expanse if the date does basically have a year which maches our filteredYear. One is a string other is a date so we have to make it simplier */
   }); /* This above expression returns true if the year stored in the Date is the same year selected in the filter  */
 
-  
+
   return (
     <div>
       <Card className="expenses">
@@ -33,3 +33,5 @@ function Expenses(props) {
     </div>
   );
 }
+
+export default Expenses;
