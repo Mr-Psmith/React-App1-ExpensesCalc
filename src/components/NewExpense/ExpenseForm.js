@@ -44,7 +44,7 @@ const ExpenseForm = (props) => { //props bec. of the UPWARD DATA PASSING
 
     const expenseData = { //we create this obj to combine all the entered data
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount, /* enforce a number conversion */
       date: new Date(enteredDate), //this parses the date string and converts it to a date object
     };
                                   // We can pass the expense data which are generated here as our argument and that's the value which we'll receive as a parameter in new expense
